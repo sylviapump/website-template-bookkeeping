@@ -353,17 +353,22 @@
                     </ul>
 
                     <!-- Contact Form -->
-                    <form class="row mt-5" action="submit_form.php" method="POST" netlify>
+                    <form class="row mt-5" name="contact" data-netlify="true">
+                        <!-- Hidden form name for Netlify -->
+                        <input type="hidden" name="form-name" value="contact">
+
                         <!-- First Name Field -->
                         <div class="form-group col-6">
                             <label for="FormControlFirstName">First Name</label>
                             <input type="text" class="form-control" id="FormControlFirstName" name="first_name">
                         </div>
+
                         <!-- Last Name Field -->
                         <div class="form-group col-6">
                             <label for="FormControlLastName">Last Name</label>
                             <input type="text" class="form-control" id="FormControlLastName" name="last_name">
                         </div>
+
                         <!-- Email Address Field -->
                         <div class="form-group col-12">
                             <label for="FormControlEmail">Email</label>
@@ -377,14 +382,12 @@
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="FormCheckAccSoftware"
                                     name="services[]" value="Accounting Software">
-                                <label class="form-check-label" for="FormCheckAccSoftware">Accounting
-                                    Software</label>
+                                <label class="form-check-label" for="FormCheckAccSoftware">Accounting Software</label>
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="FormCheckBookkeeping"
                                     name="services[]" value="General Bookkeeping">
-                                <label class="form-check-label" for="FormCheckBookkeeping">General
-                                    Bookkeeping</label>
+                                <label class="form-check-label" for="FormCheckBookkeeping">General Bookkeeping</label>
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="FormCheckPayroll" name="services[]"
@@ -403,6 +406,7 @@
                             <label for="FormControlMessage">Additional Message</label>
                             <textarea class="form-control" id="FormControlMessage" name="message" rows="3"></textarea>
                         </div>
+
                         <!-- Send Button -->
                         <div class="form-group col-12 mt-5">
                             <button type="submit" class="btn">Submit</button>
